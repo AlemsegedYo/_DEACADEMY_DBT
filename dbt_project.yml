@@ -4,7 +4,7 @@
 # name or the intended use of these models
 
 version: '1.0.0'
-name: 'my_new_project'
+name: 'yohana_dbt_project'
 
 config-version: 2
 
@@ -31,6 +31,29 @@ vars:
    target_schema: PUBLIC
 
    stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
+
+
+models:
+
+  yohana_dbt_workshop:
+
+      example:
+
+          schema: example 
+
+     
+    silver:
+
+          schema: silver
+
+          materialized: table
+
+    
+    gold:
+
+          schema: gold
+
+          materialized: view
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be

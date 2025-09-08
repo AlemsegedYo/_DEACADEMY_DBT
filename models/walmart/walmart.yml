@@ -1,0 +1,58 @@
+version: 2
+
+sources:
+  - name: scd1_db
+    database: SCD1_DB
+    schema: PUBLIC
+    tables:
+      - name: department_raw
+        description: "Raw data for department sales, including weekly sales and holidays"
+        columns:
+          - name: Store
+            description: "Unique identifier for the store"
+          - name: Dept
+            description: "Unique identifier for the department"
+          - name: Date
+            description: "The date of the sales record"
+          - name: Weekly_Sales
+            description: "Total weekly sales for the store and department"
+          - name: IsHoliday
+            description: "Indicates if the date is a holiday (TRUE/FALSE)"
+
+      - name: store_raw
+        description: "Raw data about store details, including type and size"
+        columns:
+          - name: Store
+            description: "Unique identifier for the store"
+          - name: Type
+            description: "Type of the store (e.g., A, B, C)"
+          - name: Size
+            description: "Size of the store in square feet"
+
+      - name: fact_raw
+        description: "Raw fact data containing sales metrics and environmental data"
+        columns:
+          - name: Store
+            description: "Unique identifier for the store"
+          - name: Date
+            description: "The date of the fact record"
+          - name: Temperature
+            description: "Temperature on the given date"
+          - name: Fuel_Price
+            description: "Fuel price on the given date"
+          - name: MarkDown1
+            description: "Promotional markdown value 1"
+          - name: MarkDown2
+            description: "Promotional markdown value 2"
+          - name: MarkDown3
+            description: "Promotional markdown value 3"
+          - name: MarkDown4
+            description: "Promotional markdown value 4"
+          - name: MarkDown5
+            description: "Promotional markdown value 5"
+          - name: CPI
+            description: "Consumer Price Index"
+          - name: Unemployment
+            description: "Unemployment rate"
+          - name: IsHoliday
+            description: "Indicates if the date is a holiday (TRUE/FALSE)"

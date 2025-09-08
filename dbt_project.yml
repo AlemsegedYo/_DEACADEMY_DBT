@@ -11,6 +11,19 @@ config-version: 2
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
 
+
+vars:
+
+   wrk_schema: PUBLIC
+
+   file_format_csv : SCD1_DB.PUBLIC.MY_CSV_FORMAT
+
+   purge_status: FALSE
+
+   stage_name: SCD1_DB.PUBLIC.SCD1_DEPARTMENT_STAGE
+
+   rawhist_db: SCD1_DB
+
 vars:
 
    target_db: GLUEDB
